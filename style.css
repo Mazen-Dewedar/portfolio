@@ -31,9 +31,7 @@ header{
         max-width: 1140px;
         @media screen and (min-width:890px) {
             padding-right: 0;
-        }
-
-        
+        }     
         .first{
             display: flex;
             justify-content: space-between;
@@ -240,6 +238,7 @@ main{
     }
     .container{
         border-top: 1px white solid;
+        max-width: 90%;
         padding-top: 72px;
         padding-bottom: 40px;
         margin-top: 104px;
@@ -418,7 +417,7 @@ main{
                         color: white;
                         font-family: Space Grotesk;
                         font-weight: 700;
-                        font-size: 16px;
+                        font-size: clamp(10px,4vw,16px);
                         letter-spacing: 2.29px;
                         border-bottom: #4EE1A0 2px solid;
                         padding-bottom: 10px;
@@ -434,5 +433,145 @@ main{
                 }
             }
         }
+    }
+}
+footer{
+    background-color:#242424 ;
+    min-height: 675px;
+    .container{
+        max-width: 1140px;
+        .info{
+            justify-content: space-between;
+            @media screen and (max-width:992px) {
+                align-items: center;
+            }
+            .text{
+                margin-bottom: 48px;
+                width: 445px;
+                max-width: 90%;
+                justify-content: start;
+                align-items: start;
+                h2{
+                    color: white;
+                    font-family: Space Grotesk;
+                    font-weight: 700;
+                    font-style: Bold;
+                    font-size: clamp(50px,8vw ,88px);
+                    line-height: 88px;
+                    letter-spacing: -2.5px;
+
+                }
+                p{
+                    color: #D9D9D9;
+                }
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                gap:32px;
+                width: 445px;
+                max-width: 90%;
+                #Name{
+                    width: 100%;
+                    height: 43px;
+                    border: none;
+                    outline: none;
+                    border-bottom: 1px solid #FFFFFF;
+                    background-color:#242424 ;
+
+                }
+                #email{
+                    width: 100%;
+                    height: 43px;
+                    background-color:#242424 ;
+                    border: none;
+                    outline: none;
+                    border-bottom: 1px solid #FFFFFF;
+                }
+                textarea{
+                    width: 100%; 
+                    height: 107px;
+                    border: none;
+                    outline: none;
+                    border-bottom: 1px solid #FFFFFF;
+                    background-color:#242424 ;
+
+                }
+                button{
+                    background-color: #242424;
+                    outline: none;
+                    border: none;
+                    display: flex;
+                    justify-content: end;
+                    width: 100%;
+
+                    a{
+                        height: fit-content;
+                        color: white;
+                        font-family: Space Grotesk;
+                        font-weight: 700;
+                        font-size: clamp(10px , 3vw , 16px);
+                        letter-spacing: 2.29px;
+                        border-bottom: #4EE1A0 2px solid;
+                        padding-bottom: 10px;
+                        cursor: pointer;
+                        width: fit-content;
+                        display: block;
+                        text-align:right;
+                        &:hover{
+                            color: #4EE1A0;
+                        }
+                    }
+
+
+                }
+                
+            }
+        }
+        .first{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            padding-top: 39px;
+            @media screen and (max-width:890px) {
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+            }
+            p{
+                font-family: Space Grotesk;
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 32px;
+                letter-spacing: -0.44px;
+                color:white;
+            }
+            .icons{
+                width: 192.49237060546875px;
+                height: 25px;
+                gap: 32px;
+                justify-content: center;
+                align-items: center;
+                z-index: 3;
+                margin-right: 29px;
+            @media screen and (max-width:890px) {
+                margin-right: 0;
+            }
+                p{
+                    font-size: 25px;
+                    font-weight: 100;
+                    display: inline;
+                }
+                i{
+                    width: 24.604965209960938px;
+                    height: 21.998889923095703px;
+                    color: white;
+                }
+            }
+        }
+
     }
 }

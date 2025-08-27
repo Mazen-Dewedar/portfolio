@@ -283,7 +283,7 @@ main{
                 font-family: Space Grotesk;
                 font-weight: 700;
                 font-style: Bold;
-                font-size: 88px;
+                font-size: clamp(40px , 10vw , 88px);
                 line-height: 88px;
                 letter-spacing: -2.5px;
                 color: white;
@@ -294,7 +294,7 @@ main{
                 color: white;
                 font-family: Space Grotesk;
                 font-weight: 700;
-                font-size: 16px;
+                font-size: clamp(10px , 3vw , 16px);
                 letter-spacing: 2.29px;
                 border-bottom: #4EE1A0 2px solid;
                 padding-bottom: 10px;
@@ -315,60 +315,74 @@ main{
                 .dark{
                     transition: 0.3s;
                     &:hover{
-                        
-                        .link1{
-                            display: block;
-                        }
-                        .link2{
-                            display: block;
+                        .links{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            .link1{
+                                display: block;
+                                @media screen and (max-width:992px) {
+                                    display: none;
+                                }
+                            }
+                            .link2{
+                                display: block;
+                                @media screen and (max-width:992px) {
+                                    display: none;
+                                }
+                            }
                         }
                         img{
                             filter: hue-rotate(50deg) brightness(0.5);
                         }
                     }
-                    .link1{
-                        text-decoration: none;
-                        height: fit-content;
-                        color: white;
-                        font-family: Space Grotesk;
-                        font-weight: 700;
-                        font-size: 16px;
-                        letter-spacing: 2.29px;
-                        border-bottom: #4EE1A0 2px solid;
-                        padding-bottom: 5px;
-                        cursor: pointer;
-                        width: fit-content;
-                        display: none;
-                        position: absolute;
-                        top: 205px;
-                        right: 239px;
-                        transition: 0.3s;
-                        &:hover{
-                            color: #4EE1A0;
-                        }   
-                    }             
-                    .link2{
-                        text-decoration: none;
-                        height: fit-content;
-                        color: white;
-                        font-family: Space Grotesk;
-                        font-weight: 700;
-                        font-size: 16px;
-                        letter-spacing: 2.29px;
-                        border-bottom: #4EE1A0 2px solid;
-                        padding-bottom: 5px;
-                        cursor: pointer;
-                        width: fit-content;
-                        display: none;
-                        position: absolute;
-                        top: 259px;
-                        right: 256px;
-                        transition: 0.3s;
-                        &:hover{
-                            color: #4EE1A0;
-                        }   
-                    }             
+                    .links{
+                            .link1{                         
+                            text-decoration: none;
+                            height: fit-content;
+                            color: white;
+                            font-family: Space Grotesk;
+                            font-weight: 700;
+                            font-size: 16px;
+                            letter-spacing: 2.29px;
+                            border-bottom: #4EE1A0 2px solid;
+                            padding-bottom: 5px;
+                            cursor: pointer;
+                            width: fit-content;
+                            display: none;
+                            position: absolute;
+                            top: calc(35% - 12px);
+                            right: calc(50% - 68px);
+                            transition: 0.3s;
+                            &:hover{
+                                color: #4EE1A0;
+                            }   
+                        }             
+                        .link2{
+                            text-decoration: none;
+                            height: fit-content;
+                            color: white;
+                            font-family: Space Grotesk;
+                            font-weight: 700;
+                            font-size: 16px;
+                            letter-spacing: 2.29px;
+                            border-bottom: #4EE1A0 2px solid;
+                            padding-bottom: 5px;
+                            cursor: pointer;
+                            width: fit-content;
+                            display: none;
+                            position: absolute;
+                            top: calc(45% - 12px);
+                            right: calc(52% - 68px);
+                            transition: 0.3s;
+                            &:hover{
+                                color: #4EE1A0;
+                            }   
+                        }             
+                    }
                     img{
+                        z-index: 1;
                         width: 100%;
                         cursor: pointer;
                         background-color: black;
@@ -397,6 +411,26 @@ main{
                         letter-spacing: 0px;
                         color: #D9D9D9;
                     }
+                }
+                .show{
+                    a{
+                        height: fit-content;
+                        color: white;
+                        font-family: Space Grotesk;
+                        font-weight: 700;
+                        font-size: 16px;
+                        letter-spacing: 2.29px;
+                        border-bottom: #4EE1A0 2px solid;
+                        padding-bottom: 10px;
+                        cursor: pointer;
+                        width: fit-content;
+                        font-family: Space Grotesk;
+                        line-height: 26px;
+                        &:hover{
+                            color: #4EE1A0;
+                        }
+                    }
+                    
                 }
             }
         }

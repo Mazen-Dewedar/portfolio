@@ -59,18 +59,26 @@ header{
                 align-items: center;
                 z-index: 3;
                 margin-right: 29px;
-            @media screen and (max-width:890px) {
-                margin-right: 0;
-            }
+                @media screen and (max-width:890px) {
+                    margin-right: 0;
+                }
                 p{
                     font-size: 25px;
                     font-weight: 100;
                     display: inline;
+                    cursor: pointer;
+                    &:hover{
+                        color: #4EE1A0;
+                    }
                 }
                 i{
+                    cursor: pointer;
                     width: 24.604965209960938px;
                     height: 21.998889923095703px;
                     color: white;
+                    &:hover{
+                        color: #4EE1A0;
+                    }
                 }
             }
         }
@@ -557,18 +565,27 @@ footer{
                 align-items: center;
                 z-index: 3;
                 margin-right: 29px;
-            @media screen and (max-width:890px) {
-                margin-right: 0;
-            }
+                
+                @media screen and (max-width:890px) {
+                    margin-right: 0;
+                }
                 p{
                     font-size: 25px;
                     font-weight: 100;
                     display: inline;
+                    cursor: pointer;
+                    &:hover{
+                        color: #4EE1A0;
+                    }
                 }
                 i{
+                    cursor: pointer;
                     width: 24.604965209960938px;
                     height: 21.998889923095703px;
                     color: white;
+                    &:hover{
+                        color: #4EE1A0;
+                    }
                 }
             }
         }

@@ -446,6 +446,22 @@ main{
 footer{
     background-color:#242424 ;
     min-height: 675px;
+    position: relative;
+    .circles{
+        width: 530px;
+        height: 129px;
+        position: absolute;
+        top: 340px;
+        left: -100px;
+        @media screen and (max-width:1100px) {
+            left: -200px;
+        }
+        @media screen and (max-width:890px) {
+            left: -322px;
+            top: 416px;
+        }
+        }
+    }
     .container{
         max-width: 1140px;
         .info{
